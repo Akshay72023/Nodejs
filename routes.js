@@ -25,6 +25,10 @@ const requestHandler= (req,res)=>{
       return req.on('end', () => {
         const parsedBody = Buffer.concat(body).toString();
         const message = parsedBody.split('=')[1];
+<<<<<<< HEAD
+=======
+        console.log(message);
+>>>>>>> 7b4c42b4cac2ecefce37b8489a7d0719ca541975
         fs.writeFile('message.txt', message,(err)=>{
           res.statusCode = 302;
           res.setHeader('Location', '/');
